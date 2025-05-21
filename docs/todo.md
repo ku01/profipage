@@ -41,8 +41,8 @@
   - Add Open Graph tags
 
 ## 5. Design & Theming
-- [ ] Apply modern, clean, minimalist design
-- [ ] Implement customizable theming (colors, fonts, layout)
+- [x] Apply modern, clean, minimalist design
+- [x] Implement customizable theming (colors, fonts, layout)
 
 ## 6. Testing & Quality
 - [ ] Test responsiveness and accessibility
