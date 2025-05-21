@@ -1,8 +1,8 @@
 # TODO: Professional Profile Website Implementation Steps
 
 ## 1. Project Setup
-- [ ] Initialize Vite project with React and TypeScript
-- [ ] Configure Vercel for deployment with CI/CD from main branch
+- [x] Initialize Vite project with React and TypeScript
+- [x] Configure Vercel for deployment with CI/CD from main branch
 
 ## 2. Data Management
 - [ ] Design JSON schemas for:
