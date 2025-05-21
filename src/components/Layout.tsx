@@ -27,19 +27,23 @@ const Layout: React.FC<LayoutProps> = ({ data }) => {
         <PDFExport />
       </div>
       <Header personalInfo={data.personalInfo} />
-      <main className="main-content">
-        <ProfessionalSummary 
-          summary={data.summary} 
-          highlights={data.highlights} 
-        />
-        <Experience experiences={data.experiences} />
-        <Education education={data.education} />
-        <Skills 
-          skills={data.skills} 
-          categories={data.skillCategories} 
-        />
-        <Languages languages={data.languages} />
-      </main>
+      <div className="content-grid">
+        <div className="left-column">
+          <Experience experiences={data.experiences} />
+          <Education education={data.education} />
+        </div>
+        <div className="right-column">
+          <ProfessionalSummary 
+            summary={data.summary} 
+            highlights={data.highlights} 
+          />
+          <Languages languages={data.languages} />
+          <Skills 
+            skills={data.skills} 
+            categories={data.skillCategories} 
+          />
+        </div>
+      </div>
     </div>
   );
 };
