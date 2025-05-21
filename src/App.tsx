@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'
 import Layout from './components/Layout'
-import { ThemeProvider } from './theme/ThemeProvider'
-import { ThemeSwitch } from './components/ThemeSwitch'
 import './App.css'
 
 function App() {
@@ -54,18 +52,9 @@ function App() {
   if (!data) return <div className="error">No data available</div>
 
   return (
-    <ThemeProvider>
-      <div className="app" style={{ 
-        backgroundColor: 'var(--background-color)',
-        color: 'var(--text-color)',
-        transition: 'background-color 0.3s ease, color 0.3s ease'
-      }}>
-        <div style={{ position: 'fixed', top: '1rem', right: '1rem', zIndex: 1000 }}>
-          <ThemeSwitch />
-        </div>
-        <Layout data={data} />
-      </div>
-    </ThemeProvider>
+    <div className="app">
+      <Layout data={data} />
+    </div>
   )
 }
 
