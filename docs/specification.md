@@ -41,3 +41,41 @@ A personal website presenting my professional journey, skills, and expertise. Th
 
 - **Version Control:** GitHub repository manages all source code.
 - **CI/CD:** Automated deployment pipeline to Vercel triggers on main branch updates.
+
+## Profile Structure and Sections
+
+The professional profile presents information in the following structure:
+
+1. **Header (Personal Information):**
+   - Name
+   - Photo
+   - Contact details (email, phone, location, links)
+   - Professional title
+
+2. **Professional Summary:**
+   - Brief overview of experience, expertise, and career highlights
+
+3. **Experience:**
+   - List of professional roles, each with:
+     - Job title
+     - Company name and logo
+     - Location
+     - Dates (start/end)
+     - Description of responsibilities and achievements
+
+4. **Education:**
+   - List of educational qualifications, each with:
+     - Degree or qualification
+     - Institution name and logo
+     - Location
+     - Dates (start/end)
+     - Description (optional)
+
+5. **Skills and Technologies:**
+   - Technical, language, and soft skills, grouped or listed with proficiency levels if available
+
+6. **Languages:**
+   - List of languages with proficiency levels
+
+7. **Additional Sections (optional):**
+   - Publications, certifications, projects, awards, or other relevant content
