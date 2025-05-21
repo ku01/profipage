@@ -28,14 +28,14 @@
   - Additional (optional) sections
 
 ## 4. Features
-- [ ] Implement single, scrollable page for all content
-- [ ] Add one-click PDF export of the entire profile, preserving layout/design
-- [ ] Ensure full responsiveness for all devices and screen sizes
-- [ ] Follow accessibility best practices:
+- [x] Implement single, scrollable page for all content
+- [x] Add one-click PDF export of the entire profile, preserving layout/design
+- [x] Ensure full responsiveness for all devices and screen sizes
+- [x] Follow accessibility best practices:
   - Use semantic HTML
   - Add ARIA labels
   - Support keyboard navigation
-- [ ] Optimize for SEO:
+- [x] Optimize for SEO:
   - Add meta tags
   - Set page titles and descriptions
   - Add Open Graph tags

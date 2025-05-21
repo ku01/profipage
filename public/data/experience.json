@@ -1,0 +1,30 @@
+[
+  {
+    "jobTitle": "Senior Software Engineer",
+    "company": "Tech Solutions Inc.",
+    "companyLogo": "https://via.placeholder.com/50",
+    "location": "San Francisco, CA",
+    "startDate": "2020",
+    "endDate": "Present",
+    "description": "Leading the development of cloud-based enterprise solutions.",
+    "achievements": [
+      "Architected and implemented microservices architecture",
+      "Reduced system response time by 40%",
+      "Led a team of 5 developers"
+    ]
+  },
+  {
+    "jobTitle": "Software Engineer",
+    "company": "Digital Innovations",
+    "companyLogo": "https://via.placeholder.com/50",
+    "location": "Boston, MA",
+    "startDate": "2017",
+    "endDate": "2020",
+    "description": "Full-stack development of web applications.",
+    "achievements": [
+      "Developed responsive web applications",
+      "Implemented automated testing pipeline",
+      "Improved code coverage by 60%"
+    ]
+  }
+] 

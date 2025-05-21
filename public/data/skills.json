@@ -1,0 +1,39 @@
+{
+  "categories": [
+    "Programming Languages",
+    "Frameworks & Libraries",
+    "Tools & Technologies"
+  ],
+  "items": [
+    {
+      "name": "JavaScript/TypeScript",
+      "category": "Programming Languages",
+      "proficiency": 95
+    },
+    {
+      "name": "Python",
+      "category": "Programming Languages",
+      "proficiency": 90
+    },
+    {
+      "name": "React",
+      "category": "Frameworks & Libraries",
+      "proficiency": 95
+    },
+    {
+      "name": "Node.js",
+      "category": "Frameworks & Libraries",
+      "proficiency": 90
+    },
+    {
+      "name": "AWS",
+      "category": "Tools & Technologies",
+      "proficiency": 85
+    },
+    {
+      "name": "Docker",
+      "category": "Tools & Technologies",
+      "proficiency": 80
+    }
+  ]
+} 

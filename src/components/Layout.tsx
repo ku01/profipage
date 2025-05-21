@@ -5,6 +5,7 @@ import Experience from './Experience';
 import Education from './Education';
 import Skills from './Skills';
 import Languages from './Languages';
+import PDFExport from './PDFExport';
 
 interface LayoutProps {
   data: {
@@ -22,6 +23,9 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ data }) => {
   return (
     <div className="layout">
+      <div className="export-container">
+        <PDFExport />
+      </div>
       <Header personalInfo={data.personalInfo} />
       <main className="main-content">
         <ProfessionalSummary 

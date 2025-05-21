@@ -1,0 +1,15 @@
+{
+  "name": "John Doe",
+  "photo": "https://via.placeholder.com/150",
+  "title": "Senior Software Engineer",
+  "contact": {
+    "email": "john@example.com",
+    "phone": "+1 (555) 123-4567",
+    "location": "San Francisco, CA",
+    "links": {
+      "GitHub": "https://github.com/johndoe",
+      "LinkedIn": "https://linkedin.com/in/johndoe",
+      "Twitter": "https://twitter.com/johndoe"
+    }
+  }
+} 

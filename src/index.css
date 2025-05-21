@@ -24,15 +24,49 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+section {
+  margin-bottom: 2rem;
+  scroll-margin-top: 2rem;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2.4em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.8em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
 }
 
 button {
@@ -54,6 +88,25 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2.4em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.6em;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -64,5 +117,46 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+.export-container {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 100;
+}
+
+.pdf-export-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.8em 1.6em;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-export-button:hover {
+  background-color: #45a049;
+}
+
+.pdf-export-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .export-container {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .pdf-export-button {
+    padding: 0.6em 1.2em;
+    font-size: 0.9em;
   }
 }
