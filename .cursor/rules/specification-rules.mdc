@@ -1,0 +1,6 @@
+---
+description: 
+globs: specification.md
+alwaysApply: false
+---
+Avoid using words like "should be." Write as if it already exists.
