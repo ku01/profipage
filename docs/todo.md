@@ -5,20 +5,20 @@
 - [x] Configure Vercel for deployment with CI/CD from main branch
 
 ## 2. Data Management
-- [ ] Design JSON schemas for:
+- [x] Design JSON schemas for:
   - Personal info
   - Professional journey (experience)
   - Education
   - Skills and technologies
   - Languages
   - Additional sections (publications, certifications, projects, awards, etc.)
-- [ ] Store data in separate JSON files
-- [ ] Implement HTTP fetching of JSON data in the app
-- [ ] Ensure data structure is extensible for future additions
+- [x] Store data in separate JSON files
+- [x] Implement HTTP fetching of JSON data in the app
+- [x] Ensure data structure is extensible for future additions
 
 ## 3. Application Structure
-- [ ] Implement SPA layout with React
-- [ ] Create sections:
+- [x] Implement SPA layout with React
+- [x] Create sections:
   - Header (Personal Information)
   - Professional Summary
   - Experience
