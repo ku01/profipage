@@ -1,7 +1,6 @@
 {
   "personalInfo": {
     "name": "John Doe",
-    "photo": "/images/profile.jpg",
     "contacts": {
       "email": "john@example.com",
       "location": "San Francisco, CA",

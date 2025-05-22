@@ -1,6 +1,5 @@
 export interface PersonalInfo {
   name: string;
-  photo: string;
   contacts: {
     email: string;
     phone?: string;

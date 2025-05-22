@@ -8,7 +8,6 @@ The application uses JSON files to store all profile data. Below are the schemas
 ```typescript
 {
   name: string;
-  photo: string;  // URL to photo
   title: string;
   contact: {
     email: string;

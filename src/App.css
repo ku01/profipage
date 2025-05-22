@@ -75,14 +75,6 @@
   align-items: center;
 }
 
-.profile-photo img {
-  width: 150px;
-  height: 150px;
-  border-radius: 9999px;
-  object-fit: cover;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
 .profile-info h1 {
   margin: 0;
   font-size: 2.25rem;
@@ -264,11 +256,6 @@ section h3 {
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
-  }
-
-  .profile-photo img {
-    width: 120px;
-    height: 120px;
   }
 
   .social-links {

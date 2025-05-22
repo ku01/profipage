@@ -4,7 +4,6 @@ import Header from '../Header'
 
 const mockPersonalInfo = {
   name: "John Doe",
-  photo: "https://via.placeholder.com/150",
   title: "Senior Software Engineer",
   contact: {
     email: "john@example.com",
@@ -30,10 +29,6 @@ describe('Header Component', () => {
 
   it('has basic accessibility features', () => {
     render(<Header personalInfo={mockPersonalInfo} />)
-    
-    // Check for image alt text
-    const image = screen.getByRole('img')
-    expect(image).toHaveAttribute('alt', expect.any(String))
     
     // Check for semantic heading
     expect(screen.getByRole('heading', { name: mockPersonalInfo.name })).toBeInTheDocument()

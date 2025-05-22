@@ -2,7 +2,6 @@ import React from 'react';
 
 interface PersonalInfo {
   name: string;
-  photo: string;
   title: string;
   contact: {
     email: string;
@@ -20,9 +19,6 @@ const Header: React.FC<HeaderProps> = ({ personalInfo }) => {
   return (
     <header className="header">
       <div className="header-content">
-        <div className="profile-photo">
-          <img src={personalInfo.photo} alt={personalInfo.name} />
-        </div>
         <div className="profile-info">
           <h1>{personalInfo.name}</h1>
           <h2>{personalInfo.title}</h2>
