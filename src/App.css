@@ -106,7 +106,8 @@
 
 .social-links {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0;
   margin-top: 0.5rem;
 }
 
@@ -114,6 +115,7 @@
   color: #3498DB;
   text-decoration: none;
   transition: color 150ms ease-in-out;
+  display: block;
 }
 
 .social-links a:hover {
@@ -573,14 +575,12 @@ section h3 {
     break-inside: avoid;
   }
 
-  /* Handle links appropriately without adding URLs */
-  a {
-    text-decoration: inherit;
-    color: inherit;
-  }
-
-  a[href]:after {
-    content: none;
+  /* Show full URLs for social links in print version */
+  .social-links a[href]:after {
+    content: ": " attr(href);
+    font-size: 0.9em;
+    font-style: italic;
+    display: inline-block;
   }
 
   /* Ensure images print properly */
