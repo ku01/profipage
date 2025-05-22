@@ -50,8 +50,8 @@
 - [x] Test PDF export functionality
 
 ## 7. Documentation
-- [ ] Document data schema and theming system
-- [ ] Add usage and deployment instructions
+- [x] Document data schema and theming system
+- [x] Add usage and deployment instructions
 
 ## 8. Deployment
 - [ ] Ensure automated deployment pipeline is working
