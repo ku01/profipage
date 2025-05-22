@@ -7,6 +7,7 @@ interface PersonalInfo {
     email: string;
     phone: string;
     location: string;
+    website?: string;
     links: { [key: string]: string };
   };
 }
@@ -23,6 +24,13 @@ const Header: React.FC<HeaderProps> = ({ personalInfo }) => {
           <h1>{personalInfo.name}</h1>
           <h2>{personalInfo.title}</h2>
           <div className="contact-info">
+            {personalInfo.contact.website && (
+              <p>
+                <a href={personalInfo.contact.website} target="_blank" rel="noopener noreferrer">
+                  {personalInfo.contact.website}
+                </a>
+              </p>
+            )}
             <p>{personalInfo.contact.email}</p>
             <p>{personalInfo.contact.phone}</p>
             <p>{personalInfo.contact.location}</p>

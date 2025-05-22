@@ -5,6 +5,7 @@
     "email": "john@example.com",
     "phone": "+1 (555) 123-4567",
     "location": "San Francisco, CA",
+    "website": "https://johndoe.com",
     "links": {
       "GitHub": "https://github.com/johndoe",
       "LinkedIn": "https://linkedin.com/in/johndoe",
