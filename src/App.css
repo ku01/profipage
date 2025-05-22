@@ -501,3 +501,91 @@ section h3 {
   border-radius: 4px;
   font-size: 0.9rem;
 }
+
+/* Print button styles */
+.print-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.8em 1.6em;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.print-button:hover {
+  background-color: #45a049;
+}
+
+.print-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+}
+
+/* Print styles */
+@media print {
+  /* Hide print button */
+  .export-container,
+  .print-button {
+    display: none !important;
+  }
+
+  /* Reset page margins for better print layout */
+  @page {
+    margin: 0.5cm 1cm 1cm 0.5cm;
+  }
+
+  /* Keep the original layout and styling */
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .layout {
+    padding: 0.5rem;
+  }
+
+  /* Maintain grid layout */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+  }
+
+  /* Keep original column layout */
+  .left-column,
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 0;
+  }
+
+  /* Preserve shadows and styling */
+  * {
+    box-shadow: inherit !important;
+    text-shadow: inherit !important;
+  }
+
+  /* Ensure sections break appropriately */
+  section {
+    break-inside: avoid;
+  }
+
+  /* Handle links appropriately without adding URLs */
+  a {
+    text-decoration: inherit;
+    color: inherit;
+  }
+
+  a[href]:after {
+    content: none;
+  }
+
+  /* Ensure images print properly */
+  img {
+    max-width: 100% !important;
+    break-inside: avoid;
+  }
+}
