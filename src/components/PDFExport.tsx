@@ -19,6 +19,7 @@ const PDFExport: React.FC = () => {
     <button
       onClick={handleExport}
       className="pdf-export-button"
+      data-testid="pdf-export-button"
       aria-label="Export profile as PDF"
     >
       Export as PDF

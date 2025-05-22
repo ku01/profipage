@@ -22,15 +22,21 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ data }) => {
   return (
-    <div className="layout">
+    <div className="layout" data-testid="profile-container">
       <div className="export-container">
         <PDFExport />
       </div>
-      <Header personalInfo={data.personalInfo} />
+      <div data-testid="header-section">
+        <Header personalInfo={data.personalInfo} />
+      </div>
       <div className="content-grid">
         <div className="left-column">
-          <Experience experiences={data.experiences} />
-          <Education education={data.education} />
+          <div data-testid="experience-section">
+            <Experience experiences={data.experiences} />
+          </div>
+          <div data-testid="education-section">
+            <Education education={data.education} />
+          </div>
         </div>
         <div className="right-column">
           <ProfessionalSummary 
@@ -38,10 +44,12 @@ const Layout: React.FC<LayoutProps> = ({ data }) => {
             highlights={data.highlights} 
           />
           <Languages languages={data.languages} />
-          <Skills 
-            skills={data.skills} 
-            categories={data.skillCategories} 
-          />
+          <div data-testid="skills-section">
+            <Skills 
+              skills={data.skills} 
+              categories={data.skillCategories} 
+            />
+          </div>
         </div>
       </div>
     </div>
