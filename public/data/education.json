@@ -2,7 +2,7 @@
   {
     "degree": "Master of Science in Computer Science",
     "institution": "Stanford University",
-    "institutionLogo": "https://via.placeholder.com/50",
+    "institutionLogo": "images/education/education.png",
     "location": "Stanford, CA",
     "startDate": "2015",
     "endDate": "2017",
@@ -11,7 +11,7 @@
   {
     "degree": "Bachelor of Science in Computer Engineering",
     "institution": "MIT",
-    "institutionLogo": "https://via.placeholder.com/50",
+    "institutionLogo": "images/education/education.png",
     "location": "Cambridge, MA",
     "startDate": "2011",
     "endDate": "2015",
