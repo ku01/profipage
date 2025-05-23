@@ -66,7 +66,7 @@
 
 /* Header Styles */
 .header {
-  margin-bottom: 2.5rem;
+  margin-bottom: 0rem;
 }
 
 .header-content {
@@ -124,7 +124,7 @@
 
 /* Section Styles */
 section {
-  margin-bottom: 3rem;
+  margin-bottom: 0rem;
   padding: 2rem;
   background-color: #F8F9FA;
   border-radius: 0.5rem;
@@ -295,9 +295,9 @@ section h3 {
 
 .content-grid {
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 5fr 4fr;
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 0rem;
 }
 
 .left-column,
@@ -312,7 +312,7 @@ section h3 {
   display: flex;
   align-items: flex-start;
   gap: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
 }
 
 .header-content {
@@ -342,9 +342,8 @@ section h3 {
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 0rem;
   font-size: 0.9rem;
-  text-align: left;
 }
 
 .contact-info-item {
@@ -503,13 +502,13 @@ section h3 {
   }
 
   .layout {
-    padding: 0.5rem;
+    padding: 0;
   }
 
   /* Maintain grid layout */
   .content-grid {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 7fr 3fr;
   }
 
   /* Keep original column layout */
@@ -530,6 +529,7 @@ section h3 {
   /* Ensure sections break appropriately */
   section {
     break-inside: avoid;
+    box-shadow: none;
   }
 
   /* Show full URLs for social links in print version */
