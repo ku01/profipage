@@ -286,7 +286,7 @@ section h3 {
 
 .content-grid {
   display: grid;
-  grid-template-columns: 5fr 4fr;
+  grid-template-columns: 5fr 5fr;
   gap: 2rem;
   margin-top: 0rem;
 }
@@ -481,7 +481,7 @@ section h3 {
   /* Maintain grid layout */
   .content-grid {
     display: grid;
-    grid-template-columns: 5fr 4fr;
+    grid-template-columns: 5fr 5fr;
   }
 
   /* Keep original column layout */
