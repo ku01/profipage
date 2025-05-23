@@ -185,7 +185,7 @@ section h3 {
 .location-date {
   font-size: 0.875rem;
   color: #666666;
-  margin: 0.25rem 0;
+  margin: 0;
 }
 
 .role-details ul {
@@ -533,4 +533,34 @@ section h3 {
     max-width: 100% !important;
     break-inside: avoid;
   }
+}
+
+.company-details h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+  color: #333333;
+}
+
+.company-details h4 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+  color: #444444;
+}
+
+.institution-details h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+  color: #333333;
+}
+
+.institution-details h4 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+  color: #444444;
+}
+
+.institution-details .location-date {
+  font-size: 0.875rem;
+  color: #666666;
+  margin: 0;
 }
