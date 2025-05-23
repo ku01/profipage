@@ -2,7 +2,6 @@ import React from 'react';
 
 interface Skill {
   name: string;
-  proficiency?: number; // 0-100
   category: string;
 }
 
@@ -23,17 +22,9 @@ const Skills: React.FC<SkillsProps> = ({ skills, categories }) => {
               <h3>{category}</h3>
               <div className="skill-list">
                 {categorySkills.map((skill, index) => (
-                  <div key={index} className="skill-item">
-                    <span className="skill-name">{skill.name}</span>
-                    {skill.proficiency !== undefined && (
-                      <div className="skill-proficiency">
-                        <div 
-                          className="proficiency-bar"
-                          style={{ width: `${skill.proficiency}%` }}
-                        />
-                      </div>
-                    )}
-                  </div>
+                  <span key={index} className="skill-item">
+                    {skill.name}
+                  </span>
                 ))}
               </div>
             </div>

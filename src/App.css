@@ -203,45 +203,26 @@ section h3 {
   margin-bottom: 1rem;
 }
 
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .skill-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.5rem;
+  background: #f0f4f8;
+  color: #2d3748;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #e2e8f0;
 }
 
-.skill-name {
-  flex: 1;
-  color: #333333;
-}
-
-.skill-proficiency {
-  width: 100px;
-  height: 6px;
-  background-color: #E9ECEF;
-  border-radius: 9999px;
-  overflow: hidden;
-}
-
-.proficiency-bar {
-  height: 100%;
-  background-color: #3498DB;
-  border-radius: 9999px;
-}
-
-.proficiency-dots {
-  display: flex;
-  gap: 0.25rem;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 9999px;
-  background-color: #E9ECEF;
-}
-
-.dot.filled {
-  background-color: #3498DB;
+.skill-item:hover {
+  background: #e2e8f0;
+  transform: translateY(-1px);
 }
 
 /* Responsive Design */
