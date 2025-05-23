@@ -484,7 +484,7 @@ section h3 {
   /* Maintain grid layout */
   .content-grid {
     display: grid;
-    grid-template-columns: 7fr 3fr;
+    grid-template-columns: 5fr 4fr;
   }
 
   /* Keep original column layout */
