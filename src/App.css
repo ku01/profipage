@@ -129,18 +129,21 @@ section {
   background-color: #F8F9FA;
   border-radius: 0.5rem;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  text-align: left;
 }
 
 section h2 {
   margin: 0 0 2rem;
   font-size: 1.5rem;
   color: #333333;
+  text-align: left;
 }
 
 section h3 {
   margin: 0 0 0.5rem;
   font-size: 1.25rem;
   color: #333333;
+  text-align: left;
 }
 
 /* Experience & Education Items */
@@ -163,6 +166,7 @@ section h3 {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 .company-logo,
@@ -353,11 +357,15 @@ section h3 {
 }
 
 /* Experience section */
-.experience-section {
+.experience-section,
+.education-section,
+.summary-section,
+.skills-section {
   background: #ffffff;
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
 .experience-item {
@@ -401,13 +409,6 @@ section h3 {
 }
 
 /* Summary section */
-.summary-section {
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 .proficiency-dots {
   display: flex;
   gap: 0.25rem;
@@ -425,13 +426,6 @@ section h3 {
 }
 
 /* Skills section */
-.skills-section {
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 .skills-category {
   margin-bottom: 1.5rem;
 }
@@ -444,6 +438,7 @@ section h3 {
   font-weight: 600;
   margin-bottom: 0.75rem;
   color: #333333;
+  text-align: left;
 }
 
 .skills-list {
