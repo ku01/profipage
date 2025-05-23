@@ -10,9 +10,9 @@ const PrintButton: React.FC = () => {
       onClick={handlePrint}
       className="print-button"
       data-testid="print-button"
-      aria-label="Print profile"
+      aria-label="Print"
     >
-      Print Profile
+      Print
     </button>
   );
 };
