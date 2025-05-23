@@ -44,14 +44,17 @@ A personal website presenting my professional journey, skills, and expertise. Th
 
 ## Profile Structure and Sections
 
-The professional profile presents information in the following structure:
+The professional profile presents information in the following layout structure:
 
-1. **Header (Personal Information):**
+1. **Header (Personal Information)** - positioned at the top of the page:
    - Name
-   - Photo
+   - Personal site
    - Contact details (email, phone, location, links)
    - Professional title
 
+The content below the header is organized in two columns:
+
+Left Column:
 2. **Professional Summary:**
    - Brief overview of experience, expertise, and career highlights
 
@@ -63,7 +66,14 @@ The professional profile presents information in the following structure:
      - Dates (start/end)
      - Description of responsibilities and achievements
 
-4. **Education:**
+Right Column:
+4. **Skills and Technologies:**
+   - Primary Skills:
+     - Enumerated list of core technical skills
+   - Limited Experience:
+     - Enumerated list of technologies and skills with basic familiarity or limited practical application
+
+5. **Education:**
    - List of educational qualifications, each with:
      - Degree or qualification
      - Institution name and logo
@@ -71,11 +81,5 @@ The professional profile presents information in the following structure:
      - Dates (start/end)
      - Description (optional)
 
-5. **Skills and Technologies:**
-   - Technical, language, and soft skills, grouped or listed with proficiency levels if available
-
-6. **Languages:**
-   - List of languages with proficiency levels
-
-7. **Additional Sections (optional):**
+6. **Additional Sections (optional):**
    - Publications, certifications, projects, awards, or other relevant content

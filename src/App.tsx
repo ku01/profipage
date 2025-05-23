@@ -15,15 +15,13 @@ function App() {
           summary,
           experience,
           education,
-          skills,
-          languages
+          skills
         ] = await Promise.all([
           fetch('/data/personal-info.json').then(res => res.json()),
           fetch('/data/summary.json').then(res => res.json()),
           fetch('/data/experience.json').then(res => res.json()),
           fetch('/data/education.json').then(res => res.json()),
-          fetch('/data/skills.json').then(res => res.json()),
-          fetch('/data/languages.json').then(res => res.json())
+          fetch('/data/skills.json').then(res => res.json())
         ])
 
         setData({
@@ -33,8 +31,7 @@ function App() {
           experiences: experience,
           education,
           skills: skills.items,
-          skillCategories: skills.categories,
-          languages
+          skillCategories: skills.categories
         })
       } catch (err) {
         setError('Failed to load profile data')
