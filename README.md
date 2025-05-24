@@ -3,7 +3,6 @@
 A modern, customizable professional profile website built with React and TypeScript. Features include PDF export, responsive design, and automated deployment.
 
 ## Table of Contents
-- [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
 - [Data Management](#data-management)
@@ -12,38 +11,25 @@ A modern, customizable professional profile website built with React and TypeScr
 - [Deployment](#deployment)
 - [Troubleshooting](#troubleshooting)
 
-## Prerequisites
-- Node.js (v18 or higher)
-- npm or yarn package manager
-- Git
-
 ## Getting Started
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd personal.net
-   ```
+1. Clone the repository
 
 2. Install dependencies:
    ```bash
    npm install
-   # or
-   yarn install
    ```
 
 3. Start the development server:
    ```bash
    npm run dev
-   # or
-   yarn dev
    ```
 
 4. Open your browser and navigate to `http://localhost:5173`
 
 ## Project Structure
 ```
-personal.net/
+profipage/
 ├── src/
 │   ├── components/     # React components
 │   ├── data/          # JSON data files
