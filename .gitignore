@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Test coverage
+coverage
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
