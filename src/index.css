@@ -144,3 +144,16 @@ button:focus-visible {
     font-size: 0.9em;
   }
 }
+
+.attribution {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8em;
+  color: #666;
+}
+
+@media print {
+  .attribution {
+    display: none;
+  }
+}
