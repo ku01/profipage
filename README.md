@@ -1,12 +1,11 @@
 # Professional Profile Website
 
-A modern, customizable professional profile website built with React and TypeScript. Features include PDF export, responsive design, and automated deployment.
+A modern, customizable professional profile website built with React and TypeScript. Features include print functionality, responsive design, and automated deployment.
 
 ## Table of Contents
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
 - [Data Management](#data-management)
-- [Theme Customization](#theme-customization)
 - [Features](#features)
 - [Deployment](#deployment)
 - [Troubleshooting](#troubleshooting)
@@ -33,8 +32,9 @@ profipage/
 ├── src/
 │   ├── components/     # React components
 │   ├── data/          # JSON data files
-│   ├── themes/        # Theme configurations
-│   ├── utils/         # Utility functions
+│   ├── types/         # TypeScript type definitions
+│   ├── test/          # Test files
+│   ├── assets/        # Static assets
 │   └── App.tsx        # Root component
 └── public/            # Static assets
 ```
@@ -45,42 +45,29 @@ All profile data is stored in JSON files in the `src/data/` directory. Update th
 
 For detailed information about the data structure and schemas, please refer to [data-schema.md](docs/data-schema.md).
 
-## Theme Customization
-
-The application uses a customizable theming system built with CSS variables. For detailed information about the theming system and available options, please refer to [data-schema.md](docs/data-schema.md#theming-system).
-
-### Applying Themes
-
-1. Create a new theme file in `src/themes/`
-2. Import and apply the theme using the `ThemeProvider` component:
-
-```typescript
-import { ThemeProvider } from './components/ThemeProvider';
-import myTheme from './themes/myTheme';
-
-function App() {
-  return (
-    <ThemeProvider theme={myTheme}>
-      {/* Your app content */}
-    </ThemeProvider>
-  );
-}
-```
-
 ## Features
 
-### PDF Export
-The PDF export feature uses the browser's print functionality:
-1. Click the "Download PDF" button
-2. The page will be formatted for PDF
-3. Save using the browser's print dialog
+### Print Functionality
+The print functionality uses the browser's native print capabilities:
+1. Click the "Print" button
+2. The page will be formatted for printing
+3. Use the browser's print dialog to print or save as PDF
 
-### Other Features
+### Core Features
 - Single page application (SPA) layout
 - Responsive design for all devices
 - Accessibility features (ARIA labels, semantic HTML)
 - SEO optimization (meta tags, Open Graph)
 - Modern, clean, minimalist design
+- Component-based architecture
+- Comprehensive test coverage
+
+### Available Sections
+- Professional Summary
+- Skills
+- Experience
+- Education
+- Header/Contact Information
 
 ## Deployment
 
@@ -124,14 +111,14 @@ To deploy to other platforms:
    - Check for TypeScript errors
    - Verify JSON data follows the schema
 
-2. PDF export issues:
+2. Print formatting issues:
    - Check browser compatibility
    - Ensure styles are print-friendly
    - Verify media queries for print
 
-3. Theme not applying:
-   - Check theme file structure
-   - Verify ThemeProvider is properly configured
-   - Clear browser cache
+3. Component rendering issues:
+   - Check data format in JSON files
+   - Verify component props
+   - Check browser console for errors
 
 For more issues, please check the project's GitHub issues or create a new one.
