@@ -112,16 +112,17 @@
 
 .social-links {
   display: flex;
-  flex-direction: column;
-  gap: 0;
+  flex-direction: row;
+  gap: 1rem;
   margin-top: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .social-links a {
   color: #3498DB;
   text-decoration: none;
   transition: color 150ms ease-in-out;
-  display: block;
+  display: inline-block;
 }
 
 .social-links a:hover {
@@ -522,6 +523,16 @@ section h3 {
   section {
     break-inside: avoid;
     box-shadow: none;
+  }
+
+  /* Make social links display vertically in print */
+  .social-links {
+    flex-direction: column !important;
+    gap: 0.25rem !important;
+  }
+
+  .social-links a {
+    display: block !important;
   }
 
   /* Show full URLs for social links in print version */
