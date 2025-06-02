@@ -32,7 +32,6 @@ profipage/
 ├── src/
 │   ├── components/     # React components
 │   ├── data/          # JSON data files
-│   ├── types/         # TypeScript type definitions
 │   ├── test/          # Test files
 │   ├── assets/        # Static assets
 │   └── App.tsx        # Root component
