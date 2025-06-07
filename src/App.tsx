@@ -10,6 +10,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        console.log('Starting to fetch data...')
         const [
           personalInfo,
           summary,
@@ -24,6 +25,8 @@ function App() {
           fetch('/data/skills.json').then(res => res.json())
         ])
 
+        console.log('Personal Info loaded:', personalInfo)
+
         setData({
           personalInfo,
           summary: summary.text,
@@ -34,8 +37,8 @@ function App() {
           skillCategories: skills.categories
         })
       } catch (err) {
+        console.error('Error in fetchData:', err)
         setError('Failed to load profile data')
-        console.error('Error loading data:', err)
       } finally {
         setLoading(false)
       }

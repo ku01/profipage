@@ -1,16 +1,15 @@
 export interface PersonalInfo {
   name: string;
-  contacts: {
+  title: string;
+  contact: {
     email: string;
     phone?: string;
     location: string;
     website?: string;
     links: {
-      title: string;
-      url: string;
-    }[];
+      [key: string]: string;
+    };
   };
-  professionalTitle: string;
 }
 
 export interface ProfessionalSummary {
