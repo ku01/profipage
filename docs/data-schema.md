@@ -69,17 +69,6 @@ The application uses JSON files to store all profile data. Below are the schemas
 }
 ```
 
-### Languages (`languages.json`)
-```typescript
-{
-  languages: {
-    name: string;
-    level: string;        // e.g., "Native", "Fluent", "Intermediate", "Basic"
-    certification?: string;
-  }[];
-}
-```
-
 ### Additional Sections (`additional.json`)
 ```typescript
 {
