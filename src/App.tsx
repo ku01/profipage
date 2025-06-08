@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react'
 import Layout from './components/Layout'
 import { loadProfileData } from './services/dataLoader'
+import { useFavicon } from './services/faviconLoader'
 import './App.css'
 
 function App() {
   const [data, setData] = useState<any>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+
+  // Initialize favicon handling
+  useFavicon()
 
   useEffect(() => {
     const fetchData = async () => {
