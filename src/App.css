@@ -687,20 +687,37 @@ section h2 {
     margin-bottom: 0;
   }
 
-  /* Override any centering in header for print */
+  /* Override any centering in header for print - with higher specificity */
   .header,
-  .header-content {
+  .header-content,
+  .profile-info {
     flex-direction: row !important;
     text-align: left !important;
     align-items: flex-start !important;
+    justify-content: flex-start !important;
   }
 
+  /* Override mobile styles specifically */
+  .header h1,
+  .header h2,
   .profile-info h1,
   .profile-info h2,
   .contact-info,
+  .contact-info p,
   .social-links {
     text-align: left !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
   }
+
+  /* Ensure root and app don't center align in print */
+  #root,
+  .app,
+  .layout {
+    text-align: left !important;
+  }
+
+
 
   /* Preserve shadows and styling */
   * {
