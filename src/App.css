@@ -366,16 +366,10 @@ section h2 {
     grid-template-columns: 1fr;
   }
 
-  /* Export button mobile positioning */
-  .export-container {
-    position: fixed;
-    top: 0.5rem;
-    right: 0.5rem;
-  }
-
+  /* Hide export button in mobile */
+  .export-container,
   .print-button {
-    padding: 0.6em 1.2em;
-    font-size: 0.9em;
+    display: none;
   }
 
   /* Company/Institution info mobile layout */
@@ -468,14 +462,10 @@ section h2 {
     gap: 0.5rem;
   }
 
-  .export-container {
-    top: 0.25rem;
-    right: 0.25rem;
-  }
-
+  /* Hide export button in small mobile */
+  .export-container,
   .print-button {
-    padding: 0.5em 1em;
-    font-size: 0.8em;
+    display: none;
   }
 }
 
