@@ -19,7 +19,7 @@ export const PersonalInfoSchema = z.object({
   name: z.string(),
   title: z.string(),
   contact: z.object({
-    email: z.string().email(),
+    email: z.string(),
     phone: z.string(),
     location: z.string(),
     website: z.string().url(),
