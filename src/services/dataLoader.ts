@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import {z} from 'zod';
 
 // Define the data file names
 export const DATA_FILES = [
@@ -52,8 +52,7 @@ export const SkillsSchema = z.object({
   categories: z.array(z.string()),
   items: z.array(z.object({
     name: z.string(),
-    category: z.string(),
-    proficiency: z.number().min(0).max(100)
+    category: z.string()
   }))
 });
 
@@ -91,13 +90,23 @@ async function fetchAndValidate<T>(
   try {
     const response = await fetch(url);
     if (!response.ok) {
+      console.log(`Remote data fetch failed for ${url}: HTTP status ${response.status} - ${response.statusText}`);
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
-    return schema.parse(data);
+    try {
+      return schema.parse(data);
+    } catch (validationError) {
+      console.log(`Remote data validation failed for ${url}:`, validationError);
+      throw validationError;
+    }
   } catch (error) {
     if (fallbackUrl) {
-      console.warn(`Failed to fetch from ${url}, trying fallback: ${fallbackUrl}`);
+      if (error instanceof Error) {
+        console.log(`Falling back to local data. Reason: ${error.message}`);
+      } else {
+        console.log('Falling back to local data due to unknown error');
+      }
       const fallbackResponse = await fetch(fallbackUrl);
       if (!fallbackResponse.ok) {
         throw new Error(`Fallback fetch failed! status: ${fallbackResponse.status}`);

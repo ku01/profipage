@@ -1,4 +1,4 @@
-import type { ProfileData } from './types';
+import type {ProfileData} from './types';
 
 class DataLoadError extends Error {
   constructor(message: string) {
@@ -28,12 +28,11 @@ export function validateProfileData(data: unknown): data is ProfileData {
   
   // Basic validation of required fields
   if (!profile.personalInfo?.name || 
-      !profile.personalInfo?.contacts?.email ||
+      !profile.personalInfo?.contact?.email ||
       !profile.professionalSummary?.overview ||
       !Array.isArray(profile.experience) ||
       !Array.isArray(profile.education) ||
-      !Array.isArray(profile.skills) ||
-      !Array.isArray(profile.languages)) {
+      !Array.isArray(profile.skills)) {
     return false;
   }
   

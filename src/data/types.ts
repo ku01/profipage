@@ -46,13 +46,8 @@ export interface Skill {
   category: string;
   items: {
     name: string;
-    proficiency?: 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert';
+    category: string;
   }[];
-}
-
-export interface Language {
-  name: string;
-  proficiency: 'Elementary' | 'Limited Working' | 'Professional Working' | 'Full Professional' | 'Native';
 }
 
 export interface AdditionalSection {
@@ -71,6 +66,5 @@ export interface ProfileData {
   experience: Experience[];
   education: Education[];
   skills: Skill[];
-  languages: Language[];
   additionalSections?: AdditionalSection[];
 } 
