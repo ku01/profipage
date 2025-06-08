@@ -265,13 +265,37 @@ section h2 {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  /* Prevent horizontal scroll on mobile */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
   /* Layout & Container styles for tablets and mobile */
+  #root {
+    padding: 0.5rem;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
   .app {
     padding: 1rem;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
   
   .layout {
     padding: 1rem;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
   
   .content-grid {
@@ -333,6 +357,9 @@ section h2 {
   section {
     padding: 1rem;
     margin-bottom: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .experience-section,
@@ -390,12 +417,22 @@ section h2 {
 
 /* Additional mobile-specific styles for smaller screens (phones) */
 @media (max-width: 480px) {
+  #root {
+    padding: 0.25rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
   .app {
     padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .layout {
     padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .content-grid {
@@ -437,6 +474,9 @@ section h2 {
 
   section {
     padding: 0.75rem;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   /* Center-align titles in small mobile */
