@@ -4,7 +4,6 @@ import ProfessionalSummary from './ProfessionalSummary';
 import Experience from './Experience';
 import Education from './Education';
 import Skills from './Skills';
-import PrintButton from './PrintButton';
 
 interface LayoutProps {
   data: {
@@ -21,9 +20,6 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ data }) => {
   return (
     <div className="layout" data-testid="profile-container">
-      <div className="export-container">
-        <PrintButton />
-      </div>
       <div data-testid="header-section">
         <Header personalInfo={data.personalInfo} />
       </div>
