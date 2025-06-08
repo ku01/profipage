@@ -18,6 +18,34 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* Desktop Layout Styles - Must come before mobile media queries */
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.export-container {
+  position: fixed;
+  top: 1rem;
+  right: 5rem;
+  z-index: 1000;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 5fr 5fr;
+  gap: 2rem;
+  margin-top: 0;
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -146,11 +174,14 @@ section h2 {
   text-align: left;
 }
 
-section h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.25rem;
-  color: #333333;
-  text-align: left;
+/* Desktop section h3 styles */
+@media (min-width: 1025px) {
+  section h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+    color: #333333;
+    text-align: left;
+  }
 }
 
 /* Experience & Education Items */
@@ -274,12 +305,14 @@ section h3 {
     height: 120px;
   }
 
-  .header h1 {
+  .header h1,
+  .profile-info h1 {
     font-size: 2rem;
     text-align: center;
   }
 
-  .header h2 {
+  .header h2,
+  .profile-info h2 {
     font-size: 1.25rem;
     text-align: center;
   }
@@ -307,6 +340,25 @@ section h3 {
   .summary-section,
   .skills-section {
     padding: 1rem;
+  }
+
+  /* Center-align titles in mobile */
+  section h2,
+  section h3 {
+    text-align: center;
+  }
+
+  .company-name,
+  .job-title,
+  .institution-details h3,
+  .institution-details h4 {
+    text-align: center;
+  }
+
+  .experience-header,
+  .company-details,
+  .institution-details {
+    text-align: center;
   }
 
   /* Grid layouts */
@@ -365,12 +417,16 @@ section h3 {
     padding: 0.75rem;
   }
 
-  .header h1 {
+  .header h1,
+  .profile-info h1 {
     font-size: 1.75rem;
+    text-align: center;
   }
 
-  .header h2 {
+  .header h2,
+  .profile-info h2 {
     font-size: 1.125rem;
+    text-align: center;
   }
 
   .header-photo {
@@ -389,6 +445,25 @@ section h3 {
     padding: 0.75rem;
   }
 
+  /* Center-align titles in small mobile */
+  section h2,
+  section h3 {
+    text-align: center;
+  }
+
+  .company-name,
+  .job-title,
+  .institution-details h3,
+  .institution-details h4 {
+    text-align: center;
+  }
+
+  .experience-header,
+  .company-details,
+  .institution-details {
+    text-align: center;
+  }
+
   .social-links {
     gap: 0.5rem;
   }
@@ -404,32 +479,7 @@ section h3 {
   }
 }
 
-.layout {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.export-container {
-  position: fixed;
-  top: 1rem;
-  right: 5rem;
-  z-index: 1000;
-}
-
-.content-grid {
-  display: grid;
-  grid-template-columns: 5fr 5fr;
-  gap: 2rem;
-  margin-top: 0;
-}
-
-.left-column,
-.right-column {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
+/* Desktop styles moved above - duplicates removed */
 
 /* Header styles */
 .header-photo {
@@ -439,19 +489,22 @@ section h3 {
   object-fit: cover;
 }
 
-.header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0;
-  color: #333333;
-  text-align: left;
-}
+/* Desktop header styles moved above or made desktop-specific */
+@media (min-width: 1025px) {
+  .header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #333333;
+    text-align: left;
+  }
 
-.header h2 {
-  font-size: 1.5rem;
-  color: #4285f4;
-  margin: 0.5rem 0 1rem;
-  text-align: left;
+  .header h2 {
+    font-size: 1.5rem;
+    color: #4285f4;
+    margin: 0.5rem 0 1rem;
+    text-align: left;
+  }
 }
 
 .contact-info {
@@ -497,10 +550,24 @@ section h3 {
   margin: 0;
 }
 
-.job-title {
-  color: #4285f4;
-  font-weight: 500;
-  margin: 0.25rem 0;
+/* Desktop job title styles */
+@media (min-width: 1025px) {
+  .job-title {
+    color: #4285f4;
+    font-weight: 500;
+    margin: 0.25rem 0;
+    text-align: left;
+  }
+}
+
+/* Mobile job title styles */
+@media (max-width: 1024px) {
+  .job-title {
+    color: #4285f4;
+    font-weight: 500;
+    margin: 0.25rem 0;
+    text-align: center;
+  }
 }
 
 .job-period {
