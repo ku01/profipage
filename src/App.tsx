@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Layout from './components/Layout'
+import { loadProfileData } from './services/dataLoader'
 import './App.css'
 
 function App() {
@@ -11,30 +12,17 @@ function App() {
     const fetchData = async () => {
       try {
         console.log('Starting to fetch data...')
-        const [
-          personalInfo,
-          summary,
-          experience,
-          education,
-          skills
-        ] = await Promise.all([
-          fetch('/data/personal-info.json').then(res => res.json()),
-          fetch('/data/summary.json').then(res => res.json()),
-          fetch('/data/experience.json').then(res => res.json()),
-          fetch('/data/education.json').then(res => res.json()),
-          fetch('/data/skills.json').then(res => res.json())
-        ])
-
-        console.log('Personal Info loaded:', personalInfo)
+        const profileData = await loadProfileData()
+        console.log('Loaded profile data:', profileData)
 
         setData({
-          personalInfo,
-          summary: summary.text,
-          highlights: summary.highlights,
-          experiences: experience,
-          education,
-          skills: skills.items,
-          skillCategories: skills.categories
+          personalInfo: profileData.personalInfo,
+          summary: profileData.summary.text,
+          highlights: profileData.summary.highlights,
+          experiences: profileData.experience,
+          education: profileData.education,
+          skills: profileData.skills.items,
+          skillCategories: profileData.skills.categories
         })
       } catch (err) {
         console.error('Error in fetchData:', err)

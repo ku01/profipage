@@ -121,3 +121,66 @@ To deploy to other platforms:
    - Check browser console for errors
 
 For more issues, please check the project's GitHub issues or create a new one.
+
+## Data Loading Configuration
+
+The application supports loading data from both remote and local sources. By default, it will use local JSON files stored in the `public/data` directory. To configure remote data loading:
+
+1. Create a `.env` file in the project root
+2. Add the following environment variable:
+   ```
+   REMOTE_DATA_URL=https://your-api.example.com/data
+   ```
+
+### Data Loading Behavior
+
+- If `REMOTE_DATA_URL` is set and not empty:
+  - The app will first try to load data from the remote URL
+  - If remote loading fails, it will fall back to local files
+- If `REMOTE_DATA_URL` is not set or empty:
+  - The app will load data from local files in `public/data/`
+
+### Required JSON Files
+
+The following JSON files must be present either remotely or locally:
+1. `personal-info.json` - Personal information and contact details
+2. `education.json` - Educational background and qualifications
+3. `experience.json` - Work experience and professional history
+4. `skills.json` - Technical and professional skills
+5. `summary.json` - Professional summary and overview
+
+### Local Data Directory Structure
+
+```
+public/
+  └── data/         # For JSON data files
+      ├── personal-info.json
+      ├── education.json
+      ├── experience.json
+      ├── skills.json
+      └── summary.json
+```
+
+## Development
+
+### Installation
+
+```bash
+npm install
+```
+
+### Running the Development Server
+
+```bash
+npm run dev
+```
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+## License
+
+MIT
