@@ -54,5 +54,5 @@
 - [x] Add usage and deployment instructions
 
 ## 8. Deployment
-- [ ] Ensure automated deployment pipeline is working
-- [ ] Verify site is live and updates on main branch push 
+- [X] Ensure automated deployment pipeline is working
+- [X] Verify site is live and updates on main branch push 
