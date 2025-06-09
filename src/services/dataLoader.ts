@@ -1,5 +1,13 @@
 import {z} from 'zod';
 
+// Custom error class for data loading failures
+export class DataLoadError extends Error {
+  constructor(message: string, public cause?: Error) {
+    super(message);
+    this.name = 'DataLoadError';
+  }
+}
+
 // Define the data file names
 export const DATA_FILES = [
   'personal-info',
@@ -85,35 +93,25 @@ const getLocalUrl = (file: DataFile): string => {
 async function fetchAndValidate<T>(
   url: string,
   schema: z.ZodType<T>,
-  fallbackUrl?: string
+  fileName?: string
 ): Promise<T> {
   try {
     const response = await fetch(url);
     if (!response.ok) {
-      console.log(`Remote data fetch failed for ${url}: HTTP status ${response.status} - ${response.statusText}`);
-      throw new Error(`HTTP error! status: ${response.status}`);
+      const errorMsg = `Failed to load ${fileName || 'data file'} from ${url}: HTTP status ${response.status} - ${response.statusText}`;
+      console.log(errorMsg);
+      throw new Error(errorMsg);
     }
     const data = await response.json();
     try {
       return schema.parse(data);
     } catch (validationError) {
-      console.log(`Remote data validation failed for ${url}:`, validationError);
-      throw validationError;
+      const errorMsg = `Data validation failed for ${fileName || 'data file'} from ${url}`;
+      console.log(errorMsg, validationError);
+      throw new Error(errorMsg);
     }
   } catch (error) {
-    if (fallbackUrl) {
-      if (error instanceof Error) {
-        console.log(`Falling back to local data. Reason: ${error.message}`);
-      } else {
-        console.log('Falling back to local data due to unknown error');
-      }
-      const fallbackResponse = await fetch(fallbackUrl);
-      if (!fallbackResponse.ok) {
-        throw new Error(`Fallback fetch failed! status: ${fallbackResponse.status}`);
-      }
-      const fallbackData = await fallbackResponse.json();
-      return schema.parse(fallbackData);
-    }
+    // No fallback - throw error immediately
     throw error;
   }
 }
@@ -127,35 +125,35 @@ export async function loadProfileData() {
     const personalInfo = await fetchAndValidate(
       isRemoteConfigured ? getRemoteUrl('personal-info') : getLocalUrl('personal-info'),
       PersonalInfoSchema,
-      isRemoteConfigured ? getLocalUrl('personal-info') : undefined
+      'personal-info'
     );
 
     // Fetch education data
     const education = await fetchAndValidate(
       isRemoteConfigured ? getRemoteUrl('education') : getLocalUrl('education'),
       EducationSchema,
-      isRemoteConfigured ? getLocalUrl('education') : undefined
+      'education'
     );
 
     // Fetch experience data
     const experience = await fetchAndValidate(
       isRemoteConfigured ? getRemoteUrl('experience') : getLocalUrl('experience'),
       ExperienceSchema,
-      isRemoteConfigured ? getLocalUrl('experience') : undefined
+      'experience'
     );
 
     // Fetch skills data
     const skills = await fetchAndValidate(
       isRemoteConfigured ? getRemoteUrl('skills') : getLocalUrl('skills'),
       SkillsSchema,
-      isRemoteConfigured ? getLocalUrl('skills') : undefined
+      'skills'
     );
 
     // Fetch summary data
     const summary = await fetchAndValidate(
       isRemoteConfigured ? getRemoteUrl('summary') : getLocalUrl('summary'),
       SummarySchema,
-      isRemoteConfigured ? getLocalUrl('summary') : undefined
+      'summary'
     );
 
     return {
@@ -167,6 +165,17 @@ export async function loadProfileData() {
     };
   } catch (error) {
     console.error('Error loading profile data:', error);
-    throw new Error('Failed to load profile data. Please check your configuration and try again.');
+    
+    // Throw a specific DataLoadError with a user-friendly message
+    if (error instanceof Error) {
+      throw new DataLoadError(
+        'Failed to load required data files. Some content may be missing or corrupted. Please refresh the page to try again.',
+        error
+      );
+    } else {
+      throw new DataLoadError(
+        'Failed to load required data files. Some content may be missing or corrupted. Please refresh the page to try again.'
+      );
+    }
   }
 } 
