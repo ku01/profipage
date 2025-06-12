@@ -1,6 +1,6 @@
 # Professional Profile Website
 
-A modern, customizable professional profile website built with React and TypeScript. Features include print functionality, responsive design, and automated deployment.
+A modern, customizable professional profile website built with React and TypeScript. Features include print functionality, responsive design, and automated deployment.  This project was developed as a personal challenge to build a professional-grade website entirely within the Cursor IDE, leveraging the Claude 4 Sonnet AI agent for coding assistance.
 
 ## Table of Contents
 - [Getting Started](#getting-started)
