@@ -868,6 +868,69 @@ section h2 {
     max-width: 100% !important;
     break-inside: avoid;
   }
+
+  /* Prevent page break after header */
+  .header {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* Keep content grid with header - stronger rules */
+  .content-grid {
+    break-before: avoid !important;
+    page-break-before: avoid !important;
+  }
+
+  /* Prevent any breaks in the first few elements */
+  .header + .content-grid {
+    break-before: avoid !important;
+    page-break-before: avoid !important;
+  }
+
+  /* Keep first section with header */
+  .left-column section:first-child {
+    break-before: avoid !important;
+    page-break-before: avoid !important;
+  }
+
+  /* Control section page breaks */
+  section {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+    break-before: auto;
+    page-break-before: auto;
+  }
+
+  /* Prevent page breaks after section headings */
+  section h2 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* Control breaks for experience and education items */
+  .experience-item,
+  .education-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  /* Prevent orphaned headings */
+  .company-name,
+  .job-title,
+  .institution-details h3,
+  .institution-details h4 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* Keep company/institution info together */
+  .company-info,
+  .institution-info {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
 }
 
 .company-details h3 {
