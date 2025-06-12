@@ -862,6 +862,20 @@ section h2 {
     display: inline-block;
   }
 
+  /* Replace (at) with @ in email addresses for print */
+  .contact-info p:nth-child(2) {
+    visibility: hidden;
+    position: relative;
+  }
+
+  .contact-info p:nth-child(2):after {
+    content: attr(data-email);
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
   /* Ensure images print properly */
   img {
     max-width: 100% !important;

@@ -17,6 +17,9 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ personalInfo }) => {
+  // Replace " (at) " with "@" for print version
+  const printEmail = personalInfo.contact.email.replace(/ \(at\) /g, '@');
+  
   return (
     <header className="header">
       <div className="header-content">
@@ -31,7 +34,7 @@ const Header: React.FC<HeaderProps> = ({ personalInfo }) => {
                 </a>
               </p>
             )}
-            <p>{personalInfo.contact.email}</p>
+            <p data-email={printEmail}>{personalInfo.contact.email}</p>
             <p>{personalInfo.contact.phone}</p>
             <p>{personalInfo.contact.location}</p>
             <div className="social-links">
