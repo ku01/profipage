@@ -753,13 +753,13 @@ section h2 {
     display: none !important;
   }
 
-  /* Reset page margins for better print layout */
+  /* Reset page margins for better print layout - reduced margins */
   @page:first {
-    margin: 0.5cm 1cm 1cm 0.5cm;
+    margin: 0.3cm 0.5cm 0.5cm 0.3cm;
   }
 
   @page {
-    margin: 1.5cm 1cm 1cm 0.5cm;
+    margin: 0.8cm 0.5cm 0.5cm 0.3cm;
   }
 
   /* Remove background colors for print */
@@ -785,18 +785,19 @@ section h2 {
     padding: 0;
   }
 
-  /* Maintain grid layout */
+  /* Maintain grid layout with reduced gap */
   .content-grid {
     display: grid;
     grid-template-columns: 5fr 5fr;
+    gap: 1rem;
   }
 
-  /* Keep original column layout */
+  /* Keep original column layout with reduced gap */
   .left-column,
   .right-column {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     margin-bottom: 0;
   }
 
@@ -838,10 +839,125 @@ section h2 {
     text-shadow: inherit !important;
   }
 
-  /* Ensure sections break appropriately */
+  /* Ensure sections break appropriately with reduced padding */
   section {
     break-inside: avoid;
     box-shadow: none;
+    padding: 1rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* Reduce font sizes for print */
+  .header h1,
+  .profile-info h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .header h2,
+  .profile-info h2 {
+    font-size: 1.1rem !important;
+  }
+
+  section h2 {
+    font-size: 1.2rem !important;
+    margin: 0 0 1rem !important;
+  }
+
+  section h3,
+  .company-name,
+  .company-details h3,
+  .institution-details h3 {
+    font-size: 1rem !important;
+    margin: 0 0 0.25rem !important;
+  }
+
+  .company-details h4,
+  .institution-details h4,
+  .job-title {
+    font-size: 0.9rem !important;
+    margin: 0 0 0.25rem !important;
+  }
+
+  /* Reduce spacing for experience and education items */
+  .experience-item,
+  .education-item {
+    margin-bottom: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .experience-item:last-child,
+  .education-item:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Reduce header spacing */
+  .header {
+    padding: 1rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .header-photo {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  /* Reduce contact info spacing */
+  .contact-info {
+    font-size: 0.8rem !important;
+    gap: 0 !important;
+  }
+
+  /* Reduce skills section spacing */
+  .skills-content {
+    gap: 1rem !important;
+  }
+
+  .skills-category {
+    margin-bottom: 1rem !important;
+  }
+
+  .skills-category:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .skills-category-title {
+    margin-bottom: 0.5rem !important;
+    font-size: 0.95rem !important;
+  }
+
+  .skill-item {
+    padding: 0.2rem 0.5rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* Reduce list spacing */
+  .role-details ul {
+    margin: 0.5rem 0 !important;
+    padding-left: 1.5rem !important;
+  }
+
+  .role-details li {
+    margin-bottom: 0.1rem !important;
+    font-size: 0.85rem !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Reduce general text size */
+  body, .app {
+    font-size: 0.85rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .location-date,
+  .job-period,
+  .job-location {
+    font-size: 0.75rem !important;
+  }
+
+  .technologies {
+    font-size: 0.8rem !important;
+    margin-top: 0.25rem !important;
   }
 
   /* Make social links display vertically in print */
