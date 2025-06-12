@@ -762,10 +762,24 @@ section h2 {
     margin: 1.5cm 1cm 1cm 0.5cm;
   }
 
-  /* Keep the original layout and styling */
-  body {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+  /* Remove background colors for print */
+  body,
+  .app,
+  .layout,
+  .header,
+  section,
+  .experience-section,
+  .education-section,
+  .summary-section,
+  .skills-section {
+    background-color: transparent !important;
+    background: transparent !important;
+  }
+
+  /* Remove background from skill items */
+  .skill-item {
+    background: transparent !important;
+    border: 1px solid #ccc !important;
   }
 
   .layout {
