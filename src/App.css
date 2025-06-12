@@ -779,7 +779,6 @@ section h2 {
   /* Remove background from skill items */
   .skill-item {
     background: transparent !important;
-    border: 1px solid transparent !important;
   }
 
   .layout {
