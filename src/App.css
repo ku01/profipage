@@ -280,9 +280,20 @@ section h2 {
   margin: 0;
 }
 
+/* General bullet list styling for all sections */
+section ul {
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+section li {
+  margin-bottom: 0.25rem;
+  color: #666666;
+}
+
 .role-details ul {
   margin: 1rem 0;
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 
 .role-details li {
