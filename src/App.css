@@ -806,8 +806,9 @@ section li {
   .content-grid {
     display: grid;
     grid-template-columns: 5fr 5fr;
-    gap: 1rem;
+    gap: 0rem;
     margin-top: 0 !important;
+    padding-top: 0 !important;
   }
 
   /* Keep original column layout with reduced gap */
@@ -915,7 +916,7 @@ section li {
   /* Reduce header spacing */
   .header {
     padding: 1rem !important;
-    margin-bottom: 0.25rem !important;
+    margin-bottom: 0rem !important;
   }
 
   .header-photo {
@@ -1092,6 +1093,20 @@ section li {
   .highlights-column {
     padding: 0;
     break-inside: avoid;
+  }
+
+  .professional-summary {
+    margin-top: 0rem !important;
+    padding-top: 0rem !important;
+    margin-bottom: 0rem !important;
+    padding-bottom: 0rem !important;
+  }
+
+  .summary-section {
+    margin-top: 0rem !important;
+    padding-top: 0rem !important;
+    margin-bottom: 0rem !important;
+    padding-bottom: 0rem !important;
   }
 }
 
