@@ -1103,6 +1103,23 @@ section li {
     margin-bottom: 0rem !important;
     padding-bottom: 0rem !important;
   }
+
+  .header {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .professional-summary {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  .header + .professional-summary {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .skill-list {
+    margin-top: 0.5rem !important;
+  }
 }
 
 .company-details h3 {
