@@ -793,7 +793,13 @@ section li {
   }
 
   .layout {
-    padding: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .app {
+    padding: 0 !important;
+    margin: 0 auto !important;
   }
 
   /* Maintain grid layout with reduced gap */
@@ -801,6 +807,7 @@ section li {
     display: grid;
     grid-template-columns: 5fr 5fr;
     gap: 1rem;
+    margin-top: 0 !important;
   }
 
   /* Keep original column layout with reduced gap */
@@ -840,6 +847,11 @@ section li {
   .app,
   .layout {
     text-align: left !important;
+  }
+
+  #root {
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
 
@@ -905,7 +917,7 @@ section li {
   /* Reduce header spacing */
   .header {
     padding: 1rem !important;
-    margin-bottom: 0.75rem !important;
+    margin-bottom: 0.25rem !important;
   }
 
   .header-photo {
