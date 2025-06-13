@@ -23,12 +23,14 @@ const Layout: React.FC<LayoutProps> = ({ data }) => {
       <div data-testid="header-section">
         <Header personalInfo={data.personalInfo} />
       </div>
+      <div data-testid="summary-section">
+        <ProfessionalSummary 
+          summary={data.summary} 
+          highlights={data.highlights} 
+        />
+      </div>
       <div className="content-grid">
         <div className="left-column">
-          <ProfessionalSummary 
-            summary={data.summary} 
-            highlights={data.highlights} 
-          />
           <div data-testid="experience-section">
             <Experience experiences={data.experiences} />
           </div>

@@ -8,13 +8,17 @@ interface ProfessionalSummaryProps {
 const ProfessionalSummary: React.FC<ProfessionalSummaryProps> = ({ summary, highlights }) => {
   return (
     <section className="professional-summary">
-      <h2>Professional Summary</h2>
-      <div className="summary-content">
-        <p>{summary}</p>
+      <div className="summary-grid">
+        <div className="summary-column">
+          <h2>Professional Summary</h2>
+          <div className="summary-content">
+            <p>{summary}</p>
+          </div>
+        </div>
         {highlights.length > 0 && (
-          <div className="career-highlights">
-            <h3>Career Highlights</h3>
-            <ul>
+          <div className="highlights-column">
+            <h2>Career Highlights</h2>
+            <ul className="highlights-list">
               {highlights.map((highlight, index) => (
                 <li key={index}>{highlight}</li>
               ))}
