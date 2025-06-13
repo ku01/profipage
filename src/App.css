@@ -34,7 +34,7 @@
 
 .content-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 2fr;
   gap: 2rem;
   padding: 0;
 }
@@ -63,10 +63,6 @@
 
 .card {
   padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
 
 .app {
@@ -288,7 +284,6 @@ section ul {
 
 section li {
   margin-bottom: 0.25rem;
-  color: #666666;
 }
 
 .role-details ul {
@@ -298,7 +293,6 @@ section li {
 
 .role-details li {
   margin-bottom: 0.25rem;
-  color: #666666;
 }
 
 /* Skills Section */
@@ -905,6 +899,7 @@ section li {
   .education-item {
     margin-bottom: 1rem !important;
     padding-bottom: 1rem !important;
+    border-bottom: none !important;
   }
 
   .experience-item:last-child,
@@ -1170,7 +1165,7 @@ section li {
 }
 
 .summary-content {
-  margin-top: 0rem;
+  margin-top: 0;
   line-height: 1.6;
 }
 
@@ -1180,6 +1175,6 @@ section li {
 }
 
 .highlights-list li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0;
   line-height: 1.4;
 }
