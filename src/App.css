@@ -1178,3 +1178,16 @@ section li {
   margin-bottom: 0;
   line-height: 1.4;
 }
+
+.education-description {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto 1rem auto;
+}
+
+@media (max-width: 600px) {
+  .education-description {
+    max-width: 90%;
+    font-size: 0.95rem;
+  }
+}
