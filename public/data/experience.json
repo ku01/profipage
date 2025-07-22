@@ -6,11 +6,19 @@
     "location": "San Francisco, CA",
     "startDate": "2020",
     "endDate": "Present",
-    "description": "Leading the development of cloud-based enterprise solutions.",
+    "responsibilities": [
+      "Leading the development of cloud-based enterprise solutions",
+      "Architecting scalable microservices infrastructure",
+      "Managing and mentoring a team of 5 developers",
+      "Collaborating with product managers on technical roadmaps",
+      "Conducting code reviews and ensuring best practices"
+    ],
     "achievements": [
       "Architected and implemented microservices architecture",
       "Reduced system response time by 40%",
-      "Led a team of 5 developers"
+      "Led a team of 5 developers",
+      "Delivered 3 major product releases on schedule",
+      "Improved system scalability to handle 10x traffic"
     ]
   },
   {
@@ -20,11 +28,19 @@
     "location": "Boston, MA",
     "startDate": "2017",
     "endDate": "2020",
-    "description": "Full-stack development of web applications.",
+    "responsibilities": [
+      "Full-stack development of web applications",
+      "Implementing responsive user interfaces",
+      "Building RESTful APIs and backend services",
+      "Writing comprehensive unit and integration tests",
+      "Participating in agile development processes"
+    ],
     "achievements": [
       "Developed responsive web applications",
       "Implemented automated testing pipeline",
-      "Improved code coverage by 60%"
+      "Improved code coverage by 60%",
+      "Reduced bug reports by 45% through quality testing",
+      "Contributed to 15+ successful project deployments"
     ]
   }
 ] 

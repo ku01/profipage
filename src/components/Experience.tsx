@@ -7,7 +7,7 @@ interface ExperienceItem {
   location: string;
   startDate: string;
   endDate: string;
-  description: string;
+  responsibilities: string[];
   achievements: string[];
 }
 
@@ -33,12 +33,22 @@ const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
               </div>
             </div>
             <div className="role-details">
-              <p>{exp.description}</p>
-              <ul className="achievements">
-                {exp.achievements.map((achievement, idx) => (
-                  <li key={idx}>{achievement}</li>
-                ))}
-              </ul>
+              <div className="responsibilities-section">
+                <strong>Responsibilities:</strong>
+                <ul className="responsibilities">
+                  {exp.responsibilities.map((responsibility, idx) => (
+                    <li key={idx}>{responsibility}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="achievements-section">
+                <strong>Achievements:</strong>
+                <ul className="achievements">
+                  {exp.achievements.map((achievement, idx) => (
+                    <li key={idx}>{achievement}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         ))}

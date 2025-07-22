@@ -52,7 +52,7 @@ export const ExperienceSchema = z.array(z.object({
   location: z.string(),
   startDate: z.string(),
   endDate: z.string(),
-  description: z.string(),
+  responsibilities: z.array(z.string()),
   achievements: z.array(z.string()).optional()
 }));
 

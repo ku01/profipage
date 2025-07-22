@@ -19,14 +19,12 @@ export interface ProfessionalSummary {
 
 export interface Experience {
   jobTitle: string;
-  company: {
-    name: string;
-    logo?: string;
-  };
+  company: string;
+  companyLogo: string;
   location: string;
   startDate: string;
   endDate: string | 'Present';
-  description: string;
+  responsibilities: string[];
   achievements: string[];
 }
 
